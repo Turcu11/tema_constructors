@@ -6,7 +6,10 @@ namespace tema_constructors
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Point point = new Point(1, 6);
+            point.PrintPoint();
+            point.MovePoint(10, 13);
+            point.PrintPoint();
         }
     }
 }
