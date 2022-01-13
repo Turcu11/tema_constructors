@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tema_constructors
 {
-    class Rectangle
+    public class Rectangle
     {
         int _point1X { get; set; }
         int _point1Y { get; set; }
@@ -50,7 +50,10 @@ namespace tema_constructors
             Console.WriteLine($"Side 1 = {this._point2X - this._point1X}");
             Console.WriteLine($"Side 2 = {this._point3Y - this._point1Y}");
         }
-
+        public void MoveRectangle()
+        {
+            
+        }
 
     }
 }

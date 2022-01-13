@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tema_constructors
 {
-    class Triangle
+    public class Triangle
     {
         int _point1X { get; set; }
         int _point1Y { get; set; }

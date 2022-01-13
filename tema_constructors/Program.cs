@@ -22,7 +22,7 @@ namespace tema_constructors
             Console.WriteLine();
 
             Console.WriteLine("***Rectangle***");
-            Rectangle rectangle = new Rectangle(7, 7, 11, 9, "Usless");
+            Rectangle rectangle = new Rectangle(7, 7, 11, 9, "Useless");
             rectangle.PrintRectangle();
         }
     }
