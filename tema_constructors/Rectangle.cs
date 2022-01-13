@@ -8,52 +8,55 @@ namespace tema_constructors
 {
     public class Rectangle
     {
-        int _point1X { get; set; }
-        int _point1Y { get; set; }
-        int _point2X { get; set; }
-        int _point2Y { get; set; }
-        int _point3X { get; set; }
-        int _point3Y { get; set; }
-        int _point4X { get; set; }
-        int _point4Y { get; set; }
+        Point A { get; set; }
+        Point B { get; set; }
+        Point C { get; set; }
+        Point D { get; set; }
+        int latura1 { get; set; }
+        int latura2 { get; set; }
 
-        public Rectangle(int point1x,int point1y, int side1, int side2)
+        public Rectangle(Point A, int latura1, int latura2)
         {
-            this._point1X = point1x;
-            this._point1Y = point1y;
-            this._point2X = _point1X + side1;
-            this._point2Y = _point1Y;
-            this._point3X = _point1X;
-            this._point3Y = _point1Y + side2;
-            this._point4X = _point2X;
-            this._point4Y = _point3Y;
+            this.A = A;
+            this.latura1 = latura1;
+            this.latura2 = latura2;
+            this.B.X = this.A.X + latura1;
+            this.B.Y = this.A.Y;
+            this.C.X = this.A.X;
+            this.C.Y = this.A.Y + latura2;
+            this.D.X = this.B.X;
+            this.D.Y = this.C.Y;
         }
-
-        public Rectangle(int point1x, int point1y, int point4x, int point4y, string useless)
+        public Rectangle(Point A, Point D)
         {
-            this._point1X = point1x;
-            this._point1Y = point1y;
-            this._point4X = point4x;
-            this._point4Y = point4y;
-            this._point2X = _point4X;
-            this._point2Y = _point1Y;
-            this._point3X = _point1X;
-            this._point3Y = _point4Y;
+            this.A = A;
+            this.D = D;
+            this.B.X = this.A.X;
+            this.B.Y = this.D.Y;
+            this.C.X = this.D.X;
+            this.C.Y = this.A.Y;
         }
 
         public void PrintRectangle()
         {
-            Console.WriteLine($"Point1 = X({this._point1X}), Y({this._point1Y})");
-            Console.WriteLine($"Point2 = X({this._point2X}), Y({this._point2Y})");
-            Console.WriteLine($"Point3 = X({this._point3X}), Y({this._point3Y})");
-            Console.WriteLine($"Point4 = X({this._point4X}), Y({this._point4Y})");
-            Console.WriteLine($"Side 1 = {this._point2X - this._point1X}");
-            Console.WriteLine($"Side 2 = {this._point3Y - this._point1Y}");
-        }
-        public void MoveRectangle()
-        {
-            
+            Console.WriteLine($"A {this.A.X} {this.A.Y}");
+            Console.WriteLine($"B {this.B.X} {this.B.Y}");
+            Console.WriteLine($"C {this.C.X} {this.C.Y}");
+            Console.WriteLine($"D {this.D.X} {this.D.Y}");
+            Console.WriteLine($"Latura1 = {latura1}");
+            Console.WriteLine($"Latura2 = {latura2}");
         }
 
+        public void Move(int dx, int dy)
+        {
+            this.A.X = this.A.X + dx;
+            this.A.Y = this.A.Y + dy;
+            this.B.X = this.B.X + dx;
+            this.B.Y = this.B.Y + dy;
+            this.C.X = this.C.X + dx;
+            this.C.Y = this.C.Y + dy;
+            this.D.X = this.D.X + dx;
+            this.D.Y = this.D.Y + dy;
+        }
     }
 }

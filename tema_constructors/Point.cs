@@ -8,24 +8,24 @@ namespace tema_constructors
 {
     public class Point
     {
-        public int XValue;
-        public int YValue;
+        public int X { get; set; }
+        public int Y { get; set; }
        
         public Point(int xValue, int yValue)
         {
-            this.XValue = xValue;
-            this.YValue = yValue;
+            this.X = xValue;
+            this.Y = yValue;
         }
 
         public void PrintPoint()
         {
-            Console.WriteLine($"{this.XValue} {this.YValue}");
+            Console.WriteLine($"{this.X} {this.Y}");
         }
 
         public void MovePoint(int x, int y)
         {
-            XValue = x;
-            YValue = y;
+            this.X = X + x;
+            this.Y = Y + y;
         }
     }
 }
