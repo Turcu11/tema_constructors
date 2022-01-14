@@ -21,6 +21,8 @@ namespace tema_constructors
 
             Rectangle dreptunghi = new Rectangle(point1, 4, 5);
             dreptunghi.PrintRectangle();
+
+            GeometryUtils.Move(triunghi, 2, 2);
         }
     }
 }
